@@ -2,7 +2,7 @@ import "./globals.css";
 
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
-import dbConnect from "@/lib/dbConnect";
+import dbConnect from "@/libs/dbConnect";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
