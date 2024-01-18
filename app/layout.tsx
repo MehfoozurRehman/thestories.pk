@@ -17,6 +17,7 @@ export default async function RootLayout({
   children: React.ReactNode;
 }) {
   await dbConnect();
+
   return (
     <html lang="en">
       <body className={montserrat.className}>{children}</body>
