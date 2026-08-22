@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# thestories.pk Multi-Tenant Story Platform
+
+A multi-tenant storytelling and blogging publishing platform with custom subdomain routing built with Next.js 14 App Router and MongoDB (Mongoose).
+
+## Overview
+
+`thestories.pk` provides a publishing infrastructure supporting dynamic subdomain routing (configured via Next.js middleware and `subdomains.json`), author accounts, and secure password hashing.
+
+## Tech Stack
+
+- **Framework**: [Next.js](https://nextjs.org/) (v14 App Router)
+- **Database**: MongoDB & Mongoose (v8)
+- **Authentication & Security**: `bcrypt`
+- **Routing Middleware**: Next.js Edge Middleware for subdomain rewrites
+- **Language**: TypeScript
+
+## Prerequisites
+
+- Node.js (v18 or higher recommended)
+- MongoDB database instance
+- Package manager (`pnpm` or `npm`)
 
 ## Getting Started
 
-First, run the development server:
+1. **Install dependencies**:
+   ```bash
+   pnpm install
+   # or
+   npm install
+   ```
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+2. **Configure Environment Variables**:
+   Create a `.env.local` file in the root directory:
+   ```env
+   MONGODB_URI="your-mongodb-connection-string"
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. **Run the Development Server**:
+   ```bash
+   pnpm dev
+   # or
+   npm run dev
+   ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+4. **Access the Application**:
+   Open `http://localhost:3000` in your web browser.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Available Scripts
 
-## Learn More
+- `pnpm dev` - Starts the development server.
+- `pnpm build` - Builds the application for production.
+- `pnpm start` - Starts the production build.
+- `pnpm lint` - Runs Next.js ESLint linting.
 
-To learn more about Next.js, take a look at the following resources:
+## Author
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Created by [Mehfooz-ur-Rehman](https://github.com/MehfoozurRehman).
